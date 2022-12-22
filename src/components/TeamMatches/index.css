@@ -1,0 +1,13 @@
+.team-matches-container {
+  background-image: linear-gradient(#d91c1f, #a4261d, #1e293b);
+  height: 100vh;
+  width: 100vw;
+}
+.team-banner {
+  width: 97vw;
+  height: 40vh;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
