@@ -1,1 +1,17 @@
-/* Write your CSS here */
+.latest-match-container {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.team {
+  margin-left: 80px;
+}
+.team-logos {
+  height: 30vh;
+  margin-left: 382px;
+}
+.latest-result {
+  margin-left: 440px;
+  text-align: right;
+  margin-right: 80px;
+}

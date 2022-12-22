@@ -1,6 +1,6 @@
 .team-matches-container {
   background-image: linear-gradient(#d91c1f, #a4261d, #1e293b);
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
 }
 .team-banner {
@@ -10,4 +10,9 @@
   margin-left: 20px;
   margin-bottom: 20px;
   margin-right: 20px;
+}
+.match-card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

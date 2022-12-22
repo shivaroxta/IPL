@@ -1,8 +1,13 @@
 import {useState, useEffect} from 'react'
+
+import Loader from 'react-loader-spinner'
 // eslint-disable-next-line
 import LatestMatch from '../LatestMatch'
+
 // eslint-disable-next-line
 import MatchCard from '../MatchCard'
+
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
 
 const TeamMatches = props => {
@@ -54,14 +59,33 @@ const TeamMatches = props => {
     getTeamItems()
   })
 
-  return (
+  const renderLoader = () => (
+    <div className="loaders">
+      <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
+    </div>
+  )
+  const renderMatchCard = () => (
+    <ul className="match-card-list">
+      {matches.recentMatches.map(item => (
+        <MatchCard key={item.id} matchDetails={item} />
+      ))}
+    </ul>
+  )
+
+  const renderLatestMatch = () => (
     <div className="team-matches-container">
       <img src={matches.teamBannerUrl} className="team-banner" alt="img" />
-
       <LatestMatch
         key={matches.latestMatchDetails.id}
         latestMatchDetails={matches.latestMatchDetails}
       />
+      {renderMatchCard()}
+    </div>
+  )
+
+  return (
+    <div className="latest-matches-container">
+      {isLoading ? renderLoader() : renderLatestMatch()}
     </div>
   )
 }

@@ -3,6 +3,7 @@ import './index.css'
 const LatestMatch = props => {
   const {latestMatchDetails} = props
   const {
+    // eslint-disable-next-line
     id,
     competingTeam,
     competingTeamLogo,
@@ -10,6 +11,7 @@ const LatestMatch = props => {
     firstInnings,
     manOfTheMatch,
     matchStatus,
+    // eslint-disable-next-line
     result,
     secondInnings,
     umpires,
@@ -25,7 +27,7 @@ const LatestMatch = props => {
         <p className="team-opposite">{matchStatus}</p>
       </div>
       <div className="team-logo-container">
-        <img src={competingTeamLogo} className="team-logo" alt="team logo" />
+        <img src={competingTeamLogo} className="team-logos" alt="team logo" />
       </div>
       <div className="latest-result">
         <p className="first-innings">First Innings</p>
